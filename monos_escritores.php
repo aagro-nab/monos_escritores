@@ -7,9 +7,36 @@
     <title>Document</title>
 </head>
 <body>
+        //-----------------------> FORMULARIO <-------------------------//
+        <h1>Taller de monos escritores</h1>
+    
+        <form>
+            <fieldset>
+                <legend>Búsqueda</legend>
+                <label>Introduce aquí las palabras:
+                <input type="Search"/>
+                </label><br><br>
+                <label for="Modo">¿Qué modo del texto buscar?:</label>
+                <select id="Modo">Modo
+                    <option value="Normal">Normal</option>
+                    <option value="Palabras">Palabras</option>
+                    <option value="Orden">Orden<option>
+                </select><br><br>
+                <label for="Zona">Zona horaria:</label>
+                <select id="Zona">Zona
+                    <option value="CDMX">CDMX</option>
+                    <option value="NY">New York</option>
+                    <option value="Berlín">Berlín<option>
+                </select><br><br>
+      
+                <input type="reset" value="Borrar">
+                <input type="submit" value="Enviar">
+            </fieldset>    
+        </form>
     <?php
         
-        
+       
+
         //-----------------------> FECHA Y HORA <-----------------------//
         
         date_default_timezone_set("Asia/Choibalsan");
