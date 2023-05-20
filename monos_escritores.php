@@ -7,7 +7,7 @@
     <title>Document</title>
 </head>
 <body>
-        //-----------------------> FORMULARIO <-------------------------//
+        <!-- -----------------------> FORMULARIO <-------------------------// -->
         <h1>Taller de monos escritores</h1>
     
         <form>
@@ -34,8 +34,6 @@
             </fieldset>    
         </form>
     <?php
-        
-       
 
         //-----------------------> FECHA Y HORA <-----------------------//
         
