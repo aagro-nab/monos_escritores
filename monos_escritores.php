@@ -33,7 +33,7 @@
                 <input type="reset" value="Borrar">
                 <input type="submit" value="Enviar">
             </fieldset>    
-        </form>'
+        </form>';
     
 
         //-----------------------> ARREGLO DEL USUARIO <-----------------------//
@@ -87,13 +87,9 @@
 
         echo "<br><br><b> MODO PALABRAS </b><br><br>";
 
-        //$posicion_m = array();
         $palabras_m = $palabras;
         $verificar = [];
         $diferente = true;
-
-        //$input = array("Hola", "Soy", "Ame");
-        // lo mismo de abajo: $cant_palabras = count($input);
 
         //POSICIONES QUE NO SE REPITEN
             for($cant_palabras = count($input); $cant_palabras>=0; $cant_palabras--)
@@ -122,7 +118,7 @@
                 {
                     if($posicion_m[$cont] == $cont_p)
                     {
-                        echo '<b>'.$posicion_m[$cont].' '.$input[$cont].' '.'</b>';
+                        echo '<b>'.$input[$cont].' '.'</b>';
                         $imprimir_input = true;
                     }
                 }
@@ -144,41 +140,13 @@
         
         //-----------------------> MODO DESORDEN <-----------------------//
         //Las palabras salen todas juntas desordenadas
-        /*$input = array("Hola", "Soy", "Ame", "Lol", "Que", "Funcione", "Porfavor");
+        
         echo "<br><br><b> MODO DESORDEN </b><br><br>";
 
         $cant_palabras = count($input);
-        $input_porfavor = $input;
-        $posicion_random = 0;
 
-        $input_porfavor = $input_porfavor;
-        $input_desorden[1] = $input[1];
-        echo $input_desorden[1].'<br>';
-
-
-        for($cont=0; $cont<=$cant_palabras; $cont++)
-        {
-            do
-            {
-                $posicion_random = rand(0, $cant_palabras);
-                $input_porfavor[$cont] = $input[$posicion_random];
-
-                for($cont_dif=count($input); $cont_dif>=0; $cont_dif = $cont_dif-1)
-                {
-                    if($input[$posicion_random] == $input[$cont_dif])
-                    {
-                        $diferente = false;
-                    }
-                }
-
-            }while($diferente == false);
-        }
-
-
-        //echo $input ?? "No Existe";
-
-        $cadena = implode(" ", $input_porfavor);
-        
+        shuffle($input);
+        $cadena = implode(" ", $input);
 
         $posicion = rand(1, $palabras);
 
@@ -199,7 +167,7 @@
                 echo ' ';
             }
          
-        */
+        
         echo '</main>';
       
         //-----------------------> FECHA Y HORA <-----------------------//
