@@ -9,9 +9,179 @@
 <body>
     <?php
         
+        //-----------------------> ARREGLO DEL USUARIO <-----------------------//
+
+        $input = array("Hola", "Soy", "Ame", "Lol", "Que", "Funcione", "Porfavor");
+        
+        //-----------------------> PALABRAS RANDOM <-----------------------//
+
+        echo '<main>';
+            $abecedario = array("A", "B", "C", "D", "E", "F", "G", "H", "I", "J", "K", "L",
+            "M", "N", "Ñ", "O", "P", "Q", "R", "S", "T", "U", "V", "W", "X", "Y", "Z", "a", 
+            "b", "c", "d", "e", "f", "g", "h", "i", "j", "k", "l", "m", "n", "ñ", "o", "p",
+            "q", "r", "s", "t", "u", "v", "w", "x", "y", "z", "1", "2", "3", "4", "5", "6",
+            "7", "8", "9", "0");
+
+            //echo var_dump($abecedario);
+            //echo count($abecedario);
+
+            //son 64 variables de abecedario
+
+            $longitud = rand(6, 9);
+            $palabras = rand (250, 260);
+
+        //-----------------------> MODO NORMAL <-----------------------//
+        //Las palabras salen en el documento todas juntas en orden
+
+        echo "<br><b> MODO NORMAL </b><br><br>";
+
+        $posicion = rand(1, $palabras);
+        $cadena = implode(" ", $input);
+
+            for($cont_p=$palabras; $cont_p>=0; $cont_p--)
+            {
+                if($posicion == $cont_p)
+                    echo '<b>'.$cadena.'</b>';
+                else
+                {
+                    $longitud = rand(6, 9);
+                    for($cont_l=$longitud; $cont_l>=0; $cont_l--)
+                    {
+                        $letra = rand(0, 63);
+                        echo $abecedario[$letra];
+                    }
+                }
+                echo ' ';
+            }
+        
+        
+        //-----------------------> MODO PALABRAS <-----------------------//
+        //Las palabras salen en diferentes posiciones y diferente orden
+
+        echo "<br><br><b> MODO PALABRAS </b><br><br>";
+
+        //$posicion_m = array();
+        $palabras_m = $palabras;
+        $verificar = [];
+        $diferente = true;
+
+        //$input = array("Hola", "Soy", "Ame");
+        // lo mismo de abajo: $cant_palabras = count($input);
+
+        //POSICIONES QUE NO SE REPITEN
+            for($cant_palabras = count($input); $cant_palabras>=0; $cant_palabras--)
+            {
+                do
+                {
+                    $posicion_m[$cant_palabras] = rand(1, $palabras_m);
+                    //$verificar[$cont_ver] = $posicion_m[$cant_palabras];
+
+                    for($cont_dif=count($verificar)-1; $cont_dif>=0; $cont_dif--)
+                    {
+                        if ($posicion_m[$cant_palabras] == $verificar[$cont_dif])
+                        {
+                            $diferente = false;
+                        }
+                    }
+
+                }while($diferente = false);
+            }
+
+        //GENERAR PALABRAS
+            for($cont_p=$palabras; $cont_p>=0; $cont_p--)
+            {
+                $imprimir_input = false;
+                for($cont = count($input)-1; $cont>=0; $cont--)
+                {
+                    if($posicion_m[$cont] == $cont_p)
+                    {
+                        echo '<b>'.$posicion_m[$cont].' '.$input[$cont].' '.'</b>';
+                        $imprimir_input = true;
+                    }
+                }
+
+                if($imprimir_input == false)
+                {
+                    $longitud = rand(6, 9);
+                    for($cont_l=$longitud; $cont_l>=0; $cont_l--)
+                    {
+                        $letra = rand(0, 63);
+                        echo $abecedario[$letra];
+                    }
+                    echo $cont_p.' ';
+                }
+
+                echo ' ';
+            }
+            
+        echo '</main>';
+        
+
+        
+        //-----------------------> MODO DESORDEN <-----------------------//
+        //Las palabras salen todas juntas desordenadas
+        /*$input = array("Hola", "Soy", "Ame", "Lol", "Que", "Funcione", "Porfavor");
+        echo "<br><br><b> MODO DESORDEN </b><br><br>";
+
+        $cant_palabras = count($input);
+        $input_porfavor = $input;
+        $posicion_random = 0;
+
+        $input_porfavor = $input_porfavor;
+        $input_desorden[1] = $input[1];
+        echo $input_desorden[1].'<br>';
+
+
+        for($cont=0; $cont<=$cant_palabras; $cont++)
+        {
+            do
+            {
+                $posicion_random = rand(0, $cant_palabras);
+                $input_porfavor[$cont] = $input[$posicion_random];
+
+                for($cont_dif=count($input); $cont_dif>=0; $cont_dif = $cont_dif-1)
+                {
+                    if($input[$posicion_random] == $input[$cont_dif])
+                    {
+                        $diferente = false;
+                    }
+                }
+
+            }while($diferente == false);
+        }
+
+
+        //echo $input ?? "No Existe";
+
+        $cadena = implode(" ", $input_porfavor);
+        
+
+        $posicion = rand(1, $palabras);
+
+            for($cont_p=$palabras; $cont_p>=0; $cont_p--)
+            {
+                $longitud = rand(6, 9);
+                if($posicion == $cont_p)
+                    echo '<b>'.$cadena.'</b>';
+                else
+                {
+                    $longitud = rand(6, 9);
+                    for($cont_l=$longitud; $cont_l>=0; $cont_l--)
+                    {
+                        $letra = rand(0, 63);
+                        echo $abecedario[$letra];
+                    }
+                }
+                echo ' ';
+            }
+         
+        */
+        echo '</main>';
+        
         
         //-----------------------> FECHA Y HORA <-----------------------//
         
+        echo '<br>';
         date_default_timezone_set("Asia/Choibalsan");
         $zona_horaria = date_default_timezone_get();
         $ahora = date('h:i:s a');
