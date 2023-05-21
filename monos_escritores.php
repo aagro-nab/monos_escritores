@@ -4,11 +4,38 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Taller de Monos Escritores</title>
 </head>
 <body>
-    <?php
-        
+  <?php
+        // -----------------------> FORMULARIO <-------------------------//
+        echo '<h1>Taller de monos escritores</h1>
+    
+        <form>
+            <fieldset>
+                <legend>Búsqueda</legend>
+                <label>Introduce aquí las palabras:
+                <input type="Search"/>
+                </label><br><br>
+                <label for="Modo">¿Qué modo del texto buscar?:</label>
+                <select id="Modo">Modo
+                    <option value="Normal">Normal</option>
+                    <option value="Palabras">Palabras</option>
+                    <option value="Orden">Orden<option>
+                </select><br><br>
+                <label for="Zona">Zona horaria:</label>
+                <select id="Zona">Zona
+                    <option value="CDMX">CDMX</option>
+                    <option value="NY">New York</option>
+                    <option value="Berlín">Berlín<option>
+                </select><br><br>
+      
+                <input type="reset" value="Borrar">
+                <input type="submit" value="Enviar">
+            </fieldset>    
+        </form>'
+    
+
         //-----------------------> ARREGLO DEL USUARIO <-----------------------//
 
         $input = array("Hola", "Soy", "Ame", "Lol", "Que", "Funcione", "Porfavor");
@@ -113,9 +140,6 @@
 
                 echo ' ';
             }
-            
-        echo '</main>';
-        
 
         
         //-----------------------> MODO DESORDEN <-----------------------//
@@ -177,8 +201,7 @@
          
         */
         echo '</main>';
-        
-        
+      
         //-----------------------> FECHA Y HORA <-----------------------//
         
         echo '<br>';
