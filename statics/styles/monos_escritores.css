@@ -3,23 +3,12 @@
     src: url("../fonts/the_true_bold.ttf");
 }
 
-#titulo{
-    font-family: "The Bold";
-    font-size: 650%;
-    width: 2500px;
-    
-    margin-top: 4rem;
-    margin-bottom: 3rem;
-    border: 8px ridge blue;
-    padding: 2rem;  
-    display: flex;
-    /*justify-content: center;*/
-    place-content: center;
-    /*align-content: center;*/
-    flex-direction: row;
+@font-face {
+    font-family:"Geomatrix";
+    src: url("../fonts/geomatrix.ttf");
 }
 
-.form{
+.main{
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -29,7 +18,7 @@
 }
     
 
-.form #titulo2{
+.main #titulo{
     margin-top: 2rem;
     width: 1000px;
     height: 100px;
@@ -41,4 +30,13 @@
     font-size: 300%;
     background-color: rgb(240, 139, 102);
     color: white;
+}
+
+.main #sub{
+    font-family: "Geomatrix";
+    font-size: 150%;
+}
+
+.main #form{
+    font-family: "Geomatrix";
 }

@@ -10,12 +10,13 @@
 <body>
   <?php
         // -----------------------> FORMULARIO <-------------------------//
-        echo '<div class="form">
-        <div id="titulo2">Taller de monos escritores</div>
+        echo '<div class="main">
+        <div id="titulo">Taller de monos escritores</div>
     
-        <form>
+        <span id="sub"> Busqueda </span>
+        <form id="form">
             <fieldset>
-                <legend>Búsqueda</legend>
+                
                 <label>Introduce aquí las palabras:
                 <input type="Search"/>
                 </label><br><br>
