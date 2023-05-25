@@ -1,0 +1,42 @@
+@font-face {
+    font-family:"The Bold";
+    src: url("../fonts/the_true_bold.ttf");
+}
+
+@font-face {
+    font-family:"Geomatrix";
+    src: url("../fonts/geomatrix.ttf");
+}
+
+.main{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 50px;
+}
+    
+
+.main #titulo{
+    margin-top: 2rem;
+    width: 1000px;
+    height: 100px;
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    line-height: 100px;
+    font-family: "The Bold";
+    font-size: 300%;
+    background-color: rgb(240, 139, 102);
+    color: white;
+}
+
+.main #sub{
+    font-family: "Geomatrix";
+    font-size: 150%;
+}
+
+.main #form{
+    font-family: "Geomatrix";
+}

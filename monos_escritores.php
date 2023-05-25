@@ -4,15 +4,19 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href=".\statics\styles\monos_escritores.css">
     <title>Taller de Monos Escritores</title>
 </head>
 <body>
-<!-- ---------------------- FORMULARIO <------------------------- -->
-        <h1>Taller de monos escritores</h1>
+
+        // -----------------------> FORMULARIO <-------------------------//
+        echo '<div class="main">
+        <div id="titulo">Taller de monos escritores</div>
     
-        <form action".monos_escritores.php" method= "post">
+        <span id="sub"> Busqueda </span>
+        <form id="form" action".monos_escritores.php" method= "post">
             <fieldset>
-                <legend>Búsqueda</legend>
+                
                 <label>Introduce aquí las palabras:
                 <input type="text" name="input"/>
                 </label><br><br>
@@ -32,7 +36,8 @@
                 <input type="reset" value="Borrar">
                 <input type="submit" value="Enviar">
             </fieldset>    
-        </form>';
+        </form>
+        </div>';
     
   <?php
 
