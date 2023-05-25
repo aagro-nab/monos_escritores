@@ -1,0 +1,44 @@
+@font-face {
+    font-family:"The Bold";
+    src: url("../fonts/the_true_bold.ttf");
+}
+
+#titulo{
+    font-family: "The Bold";
+    font-size: 650%;
+    width: 2500px;
+    
+    margin-top: 4rem;
+    margin-bottom: 3rem;
+    border: 8px ridge blue;
+    padding: 2rem;  
+    display: flex;
+    /*justify-content: center;*/
+    place-content: center;
+    /*align-content: center;*/
+    flex-direction: row;
+}
+
+.form{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 50px;
+}
+    
+
+.form #titulo2{
+    margin-top: 2rem;
+    width: 1000px;
+    height: 100px;
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    line-height: 100px;
+    font-family: "The Bold";
+    font-size: 300%;
+    background-color: rgb(240, 139, 102);
+    color: white;
+}

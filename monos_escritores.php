@@ -4,12 +4,14 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href=".\statics\styles\monos_escritores.css">
     <title>Taller de Monos Escritores</title>
 </head>
 <body>
   <?php
         // -----------------------> FORMULARIO <-------------------------//
-        echo '<h1>Taller de monos escritores</h1>
+        echo '<div class="form">
+        <div id="titulo2">Taller de monos escritores</div>
     
         <form>
             <fieldset>
@@ -33,7 +35,8 @@
                 <input type="reset" value="Borrar">
                 <input type="submit" value="Enviar">
             </fieldset>    
-        </form>';
+        </form>
+        </div>';
     
 
         //-----------------------> ARREGLO DEL USUARIO <-----------------------//
