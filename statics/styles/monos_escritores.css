@@ -8,6 +8,15 @@
     src: url("../fonts/geomatrix.ttf");
 }
 
+.mainmain{
+    background-color: rgb(255, 216, 202);
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
 .main{
     display: flex;
     flex-direction: column;
@@ -17,7 +26,6 @@
     gap: 50px;
 }
     
-
 .main #titulo{
     margin-top: 2rem;
     width: 1000px;
@@ -27,16 +35,60 @@
     text-align: center;
     line-height: 100px;
     font-family: "The Bold";
-    font-size: 300%;
+    font-size: 325%;
     background-color: rgb(240, 139, 102);
     color: white;
 }
 
-.main #sub{
+.sub{
     font-family: "Geomatrix";
-    font-size: 150%;
+    font-size: 175%;
+    font-weight: bold;
 }
 
-.main #form{
+.sub_p{
     font-family: "Geomatrix";
+    font-size: 175%;
+    font-weight: bold;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin: 30px;
+    background-color: rgb(240, 139, 102);
+    color: white;
+
 }
+
+.form{
+    font-family: "Geomatrix";
+    font-size: 115%;
+}
+
+.cuerpo{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+
+.cuerpo #form{
+    background-color: rgb(240, 139, 102);
+    color: white;
+    border-radius: 10%;    
+    height: 200px;
+    padding: 18px;
+}
+
+.cuerpo #enviar{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+    
+}
+
